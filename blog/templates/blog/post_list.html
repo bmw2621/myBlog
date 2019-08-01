@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset='UTF-8'/>
+    <title>Benjamin Winchester</title>
+    <link rel="stylesheet" id="ss" type="text/css" href="{% static 'css/styles.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+
+
+</head>
+    <body>
+    <div class="header_footer_section">
+
+      <h1>Benjamin M. Winchester</h1>
+
+      <p>Make the computer do the thing...</p><br>
+
+      <p>
+        <a href="https://wwww.linkedin.com/in/benjamin_m_winchester"><img class="social" src="{% static 'images/linkedin-logo.png' %}"> </a>
+        <a href="https://www.github.com/bmw2621"><img class="social" src="{% static 'images/github-logo.png' %}"> </a>
+        <a href="https://codepen.io/bmw2621/"><img class="social" src="{% static 'images/codepen-logo.png' %}"> </a>
+        <a href="https://twitter.com/b_m_winchester"><img class="social" src="{% static 'images/twitter-logo.png' %}"> </a>
+          <a href="/"><img class="social" src="{% static 'images/resume-logo.png' %}"> </a>
+          <a href="/blog"><img class="social" src="{% static 'images/blog-logo.png' %}"> </a>
+      </p>
+
+    </div>
+
+    <div class="code_block">
+        <table>
+          <tbody>
+            <tr>
+              <td class="left_col">
+                <img src="{% static 'images/ben.jpg' %}" height=200 align="top">
+              </td>
+              <td class="right_col">
+                  <table>
+                      <tbody>
+                        <td>
+                            <td colspan="2"></td><b>ben</b>@<b>bmw2621.github.io</b><br>---------------------</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Name</b>:
+                            </td>
+                            <td>
+                                Benjamin winchester
+                            </td>
+                        </tr>
+                      <tr>
+                            <td>
+                                <b>Home</b>:
+                            </td>
+                            <td>
+                                Savannah, GA
+                            </td>
+                        </tr>
+                      <tr>
+                            <td>
+                                <b>Title</b>:
+                            </td>
+                            <td>
+                                Python Developer
+                            </td>
+                        </tr>
+                      <tr>
+                            <td>
+                                <b>Email</b>:
+                            </td>
+                            <td>
+                                benjamin.m.winchester@googlemail.com
+                            </td>
+                        </tr>
+                      <tr>
+                            <td>
+                                <b>Quote</b>:
+                            </td>
+                            <td>
+                                <div>If you can dream--and not make dreams your master;<br>
+                                     If you can think--and not make thoughts your aim;<br>
+                                     ...<br>
+                                     If you can talk with crowds and keep your virtue;<br>
+                                     Or walk with Kings--nor lose the common touch,<br>
+                                     ...<br>
+                                     Yours is the Earth and everything that's in it,<br>
+                                     And--which is more--you'll be a Man, my son!<br>
+                                             <p style="text-align: right;">~Rudyard Kipling, excerpt from "If"</p></div>
+                            </td>
+                        </tr>
+                      </tbody>
+                  </table>
+
+                <table border=0 align="center">
+                  <tr>
+                    <td bgcolor="#9D403C" width=30 height=20></td>
+                    <td bgcolor="#737573" width=30 height=20></td>
+                    <td bgcolor="#E3B97D" width=30 height=20></td>
+                    <td bgcolor="#72A1B2" width=30 height=20></td>
+                    <td bgcolor="#AB7FA1" width=30 height=20></td>
+                    <td bgcolor="#17AC8E" width=30 height=20></td>
+                    <td bgcolor="#C6C6C6" width=30 height=20></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+                <td colspan="2">[<b>ben</b>@<b>bmw2621.github.io</b> ~]<b>$</b> _</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+
+        {% for post in posts %}
+            <div class="code_block">
+                <h2 class="post_title">{{ post.title }}</h2>
+                <p class="timestamp">published: {{ post.published_date }}</p>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
+    </body>
+</html>
