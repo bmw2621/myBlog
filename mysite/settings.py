@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog',
     'resume',
+    'home'
 ]
 
 MIDDLEWARE = [
@@ -121,3 +122,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+STATICFILES_DIRS = [
+    "/home/static",
+    "/blog/static",
+    "/resume/static",
+]
