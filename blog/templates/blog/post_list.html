@@ -4,221 +4,52 @@
 <head>
     <meta charset='UTF-8'/>
     <title>Benjamin Winchester</title>
-    <link rel="stylesheet" id="ss" type="text/css" href="{% static 'css/styles.css' %}">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
     <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
-  <style>
-  h1 {
-  text-shadow: 10px 10px 25px black;
-}
-
-a {
-  text-decoration: none;
-}
-
-body {
-  background-color: #282C34;
-  font-family: "Courier New", monospace, serif;
-  color: #9DA5B4;
-  text-size: 13px;
-}
-
-pre {
-  font-size: 13px;
-}
-
-td {
-  vertical-align: text-top;
-  font-size: 13px;
-  line-height: 13px;
-}
-
-.header_footer_section {
-  background-color: #353B45;
-  text-align: center;
-  padding: 20px 0;
-  margin: 0;
-  color: #9DA5B4;
-}
-
-.social {
-  height: 40px;
-}
-
-h2.post_title {
-    color: #59C0A7;
-}
-
-p.timestamp {
-    font-size: 9px;
-}
-
-.code_block {
-  width: 80%; /*Not responsive, figure out how to make 80% and not greater than 750px*/
-  align: center;
-  margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 10px 10px 25px black;
-  border-color: #59C0A7;
-  border-width: 1px;
-  border-style: solid;
-  padding: 10px;
-}
-
-.purple {
-  color: #C678DD;
-}
-
-.blue {
-  color: #56B6C2;
-}
-
-.red {
-  color: #E06C75;
-}
-
-.tan {
-  color: #E5C07B;
-}
-
-#left_col {
-  text-align: right;
-  padding-right: 30px;
-}
-
-#right_col {
-  text-align: left;
-}
-
-input[type=checkbox]{
-	height: 0;
-	width: 0;
-	visibility: hidden;
-}
-
-label {
-	cursor: pointer;
-	text-indent: -9999px;
-	width: 52px;
-	height: 27px;
-	background: #9DA5B4;
-	float: right;
-	border-radius: 100px;
-	position: relative;
-}
-
-label:after {
-	content: '';
-	position: absolute;
-	top: 3px;
-	left: 3px;
-	width: 20px;
-	height: 20px;
-	background: #fff;
-	border-radius: 90px;
-	transition: 0.3s;
-}
-
-input:checked + label {
-	background: var(--color-headings);
-}
-input#switch2:checked + label#222{
-	background: red;
-}
-
-input:checked + label:after {
-	left: calc(100% - 5px);
-	transform: translateX(-100%);
-}
-
-label:active:after {
-	width: 45px;
-}
-
-html.transition,
-html.transition *,
-html.transition *:before,
-html.transition *:after {
-  transition: all 750ms !important;
-  transition-delay: 0 !important;
-}
-.toggle-container label{
-  margin-right: 20px;
-}
-  </style>
+    <script src="{% static 'scripts/index.js' %}"></script>
 
 </head>
     <body>
-    <div class="header_footer_section">
+<!--    <div class="header_footer_section">-->
 
-      <h1>Benjamin M. Winchester</h1>
+<!--      <h1>Benjamin M. Winchester</h1>-->
 
-      <p>Make the computer do the thing...</p><br>
+<!--      <p>Make the computer do the thing...</p><br>-->
 
-      <p> 
-        <a href="https://wwww.linkedin.com/in/benjamin_m_winchester"><img class="social" src="{% static 'images/linkedin-logo.png' %}"> </a>
-        <a href="https://www.github.com/bmw2621"><img class="social" src="{% static 'images/github-logo.png' %}"> </a>
-        <a href="https://codepen.io/bmw2621/"><img class="social" src="{% static 'images/codepen-logo.png' %}"> </a>
-        <a href="https://twitter.com/b_m_winchester"><img class="social" src="{% static 'images/twitter-logo.png' %}"> </a>
-          <a href="/"><img class="social" src="{% static 'images/resume-logo.png' %}"> </a>
-          <a href="/blog"><img class="social" src="{% static 'images/blog-logo.png' %}"> </a>
-      </p>
+<!--      <p> -->
+<!--        <a href="https://wwww.linkedin.com/in/benjamin_m_winchester"><img class="social" src="{% static 'images/linkedin-logo.png' %}"> </a>-->
+<!--        <a href="https://www.github.com/bmw2621"><img class="social" src="{% static 'images/github-logo.png' %}"> </a>-->
+<!--        <a href="https://codepen.io/bmw2621/"><img class="social" src="{% static 'images/codepen-logo.png' %}"> </a>-->
+<!--        <a href="https://twitter.com/b_m_winchester"><img class="social" src="{% static 'images/twitter-logo.png' %}"> </a>-->
+<!--          <a href="/"><img class="social" src="{% static 'images/resume-logo.png' %}"> </a>-->
+<!--          <a href="/blog"><img class="social" src="{% static 'images/blog-logo.png' %}"> </a>-->
+<!--      </p>-->
 
-    </div>
+<!--    </div>-->
+    <nav class="isHiddenTop" id="nav">
+            <img id="github" class="socialMediaLogo" src="{% static '/images/github-logo.png' %}" alt="">
+            <img id="codepen" class="socialMediaLogo" src="{% static '/images/codepen-logo.png' %}" alt="">
+            <img id="twitter" class="socialMediaLogo" src="{% static '/images/twitter-logo.png' %}" alt="">
+            <img id="linkedin" class="socialMediaLogo" src="{% static '/images/linkedin-logo.png' %}" alt="">
+            <div class="empty"></div>
+        </nav>
+        <div class="hamburger" id="hamburger">
+            <div class="hamburgerSlice"></div>
+            <div class="hamburgerSlice"></div>
+            <div class="hamburgerSlice"></div>
+        </div>
+    </nav>
 
-    <div class="code_block">
-        <table>
-          <tbody>
-            <tr>
-              <td class="left_col">
-                <img src="{% static 'images/ben.jpg' %}" height=200 align="top">
-              </td>
-              <td class="right_col">
-                  <table>
-                      <tbody>
-                        <td>
-                            <td colspan="2"></td><b>ben</b>@<b>bmw2621.github.io</b><br>---------------------</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <b>Name</b>:
-                            </td>
-                            <td>
-                                Benjamin winchester
-                            </td>
-                        </tr>
-                      <tr>
-                            <td>
-                                <b>Home</b>:
-                            </td>
-                            <td>
-                                Savannah, GA
-                            </td>
-                        </tr>
-                      <tr>
-                            <td>
-                                <b>Title</b>:
-                            </td>
-                            <td>
-                                Python Developer
-                            </td>
-                        </tr>
-                      <tr>
-                            <td>
-                                <b>Email</b>:
-                            </td>
-                            <td>
-                                benjamin.m.winchester@googlemail.com
-                            </td>
-                        </tr>
-                      <tr>
-                            <td>
-                                <b>Quote</b>:
-                            </td>
-                            <td>
-                                <div>If you can dream--and not make dreams your master;<br>
+    <div class="code_block headBlock">
+        <div id="pic"><img src="{% static 'images/ben.jpg' %}" alt=""></div>
+        <div id="head">ben@bwinDev<br>------------------</div>
+        <div id="row1">Name:</div> <div id="text1">Benjamin Winchester</div>
+        <div id="row2">Title:</div> <div id="text2">Web Developer</div>
+        <div id="row3">Home:</div> <div id="text3">Savannah, GA</div>
+        <div id="row4">Email: </div><div id="text4">benjamin.m.winchester@gmail.com</div>
+        <div id="row5">Quote:</div> <div id="text5">
+            <div id="quote">If you can dream&#45;&#45;and not make dreams your master;<br>
                                      If you can think--and not make thoughts your aim;<br>
                                      ...<br>
                                      If you can talk with crowds and keep your virtue;<br>
@@ -227,29 +58,86 @@ html.transition *:after {
                                      Yours is the Earth and everything that's in it,<br>
                                      And--which is more--you'll be a Man, my son!<br>
                                              <p style="text-align: right;">~Rudyard Kipling, excerpt from "If"</p></div>
-                            </td>
-                        </tr>
-                      </tbody>
-                  </table>
+    </div>
+        <div id="row6">
+            <div class="colors">
+                <div class="color" style="background-color: #9D403C;"></div>
+                <div class="color" style="background-color: #737573;"></div>
+                <div class="color" style="background-color: #E3B97D;"></div>
+                <div class="color" style="background-color: #72A1B2;"></div>
+                <div class="color" style="background-color: #AB7FA1;"></div>
+                <div class="color" style="background-color: #17AC8E;"></div>
+                <div class="color" style="background-color: #C6C6C6;"></div>
+            </div>
+        </div>
+        <div id="foot">[<b>ben</b>@<b>bwinDev</b> ~]<b>$</b> _</div>
+<!--        <table id="mainTable">-->
+<!--          <tbody>-->
+<!--            <tr>-->
+<!--              <td class="left_col">-->
+<!--                <img src="{% static 'images/ben.jpg' %}" height=200 align="top">-->
+<!--              </td>-->
+<!--              <td class="right_col">-->
+<!--                  <table>-->
+<!--                      <tbody>-->
+<!--                        <td>-->
+<!--                            <td colspan="2"></td><b>ben</b>@<b>bmw2621.github.io</b><br>-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</td>-->
+<!--                        </tr>-->
+<!--                        <tr>-->
+<!--                            <td>Name:</td>-->
+<!--                            <td> Benjamin winchester</td>-->
+<!--                        </tr>-->
+<!--                        <tr>-->
+<!--                            <td>Home:</td>-->
+<!--                            <td>Savannah, GA</td>-->
+<!--                        </tr>-->
+<!--                        <tr>-->
+<!--                            <td>Title:</td>-->
+<!--                            <td>Python Developer</td>-->
+<!--                        </tr>-->
+<!--                        <tr>-->
+<!--                            <td>Email:</td>-->
+<!--                            <td>benjamin.m.winchester@gmail.com</td>-->
+<!--                        </tr>-->
+<!--                        <tr>-->
+<!--                            <td>Quote:</td>-->
+<!--                            <td>-->
+<!--                                <div id="quote">If you can dream&#45;&#45;and not make dreams your master;<br>-->
+<!--                                     If you can think&#45;&#45;and not make thoughts your aim;<br>-->
+<!--                                     ...<br>-->
+<!--                                     If you can talk with crowds and keep your virtue;<br>-->
+<!--                                     Or walk with Kings&#45;&#45;nor lose the common touch,<br>-->
+<!--                                     ...<br>-->
+<!--                                     Yours is the Earth and everything that's in it,<br>-->
+<!--                                     And&#45;&#45;which is more&#45;&#45;you'll be a Man, my son!<br>-->
+<!--                                             <p style="text-align: right;">~Rudyard Kipling, excerpt from "If"</p></div>-->
+<!--                            </td>-->
+<!--                        </tr>-->
+<!--                        <tr>-->
+<!--                            <td></td>-->
+<!--                            <td>-->
+<!--                                 <div class="colors">-->
+<!--                                     <div class="color" style="background-color: #9D403C;"></div>-->
+<!--                                     <div class="color" style="background-color: #737573;"></div>-->
+<!--                                     <div class="color" style="background-color: #E3B97D;"></div>-->
+<!--                                     <div class="color" style="background-color: #72A1B2;"></div>-->
+<!--                                     <div class="color" style="background-color: #AB7FA1;"></div>-->
+<!--                                     <div class="color" style="background-color: #17AC8E;"></div>-->
+<!--                                     <div class="color" style="background-color: #C6C6C6;"></div>-->
+<!--                                 </div>-->
+<!--                            </td>-->
+<!--                        </tr>-->
+<!--                      </tbody>-->
+<!--                  </table>-->
 
-                <table border=0 align="center">
-                  <tr>
-                    <td bgcolor="#9D403C" width=30 height=20></td>
-                    <td bgcolor="#737573" width=30 height=20></td>
-                    <td bgcolor="#E3B97D" width=30 height=20></td>
-                    <td bgcolor="#72A1B2" width=30 height=20></td>
-                    <td bgcolor="#AB7FA1" width=30 height=20></td>
-                    <td bgcolor="#17AC8E" width=30 height=20></td>
-                    <td bgcolor="#C6C6C6" width=30 height=20></td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-            <tr>
-                <td colspan="2">[<b>ben</b>@<b>bwinDev</b> ~]<b>$</b> _</td>
-            </tr>
-          </tbody>
-        </table>
+
+<!--              </td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td colspan="2">[<b>ben</b>@<b>bwinDev</b> ~]<b>$</b> _</td>-->
+<!--            </tr>-->
+<!--          </tbody>-->
+<!--        </table>-->
     </div>
 
         {% for post in posts %}

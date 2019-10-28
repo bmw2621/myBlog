@@ -1,0 +1,240 @@
+:root {
+    --color1: #282C34;
+    --color2: #16A085;
+    --color7: #ABB2C0;
+    --color8: #5A606E;
+}
+
+h1 {
+  text-shadow: 10px 10px 25px black;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+body {
+  background-color: #282C34;
+  font-family: "Courier New", monospace, serif;
+  color: #9DA5B4;
+  text-size: 13px;
+  width: 100%;
+  height: 100%;
+}
+
+pre {
+  font-size: 13px;
+}
+
+td {
+  vertical-align: text-top;
+  font-size: 13px;
+  line-height: 13px;
+  word-wrap: break-word;
+}
+
+.header_footer_section {
+  background-color: #353B45;
+  text-align: center;
+  padding: 20px 0;
+  margin: 0;
+  color: #9DA5B4;
+}
+
+.social {
+  height: 40px;
+}
+
+h2.post_title {
+    color: #59C0A7;
+}
+
+p.timestamp {
+    font-size: 9px;
+}
+
+.code_block {
+  width: 90%; /*Not responsive, figure out how to make 80% and not greater than 750px*/
+  align: center;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 10px 10px 25px black;
+  border-color: #59C0A7;
+  border-width: 1px;
+  border-style: solid;
+  padding: 10px;
+  text-size: 13px;
+}
+
+.purple {
+  color: #C678DD;
+}
+
+.blue {
+  color: #56B6C2;
+}
+
+.red {
+  color: #E06C75;
+}
+
+.tan {
+  color: #E5C07B;
+}
+
+.colors {
+    display: flex;
+}
+
+.color {
+    width: 40px;
+    height: 30px;
+}
+
+#text1 {
+    grid-area: text1;
+    word-wrap: break-word;
+}
+
+#text2 {
+    grid-area: text2;
+    word-wrap: break-word;
+}
+
+#text3 {
+    grid-area: text3;
+    word-wrap: break-word;
+}
+
+#text4 {
+    grid-area: text4;
+    word-wrap: break-word;
+}
+
+#text5 {
+    grid-area: text5;
+    word-wrap: break-word;
+}
+
+#row1 {
+    grid-area: row1;
+    word-wrap: break-word;
+}
+
+#row2 {
+    grid-area: row2;
+    word-wrap: break-word;
+}
+
+#row3 {
+    grid-area: row3;
+    word-wrap: break-word;
+}
+
+#row4 {
+    grid-area: row4;
+    word-wrap: break-word;
+}
+
+#row5 {
+    grid-area: row5;
+    word-wrap: break-word;
+}
+
+#row6 {
+    grid-area: row6;
+    word-wrap: break-word;
+    display: flex;
+    justify-content: center;
+}
+
+#head {
+    grid-area: head;
+}
+
+#pic {
+    grid-area: pic;
+    padding-right: 10px;
+}
+
+#foot {
+    grid-area: foot;
+}
+
+.headBlock {
+    display: grid;
+    grid-template-columns: 200px 100px auto;
+    grid-template-rows: auto auto auto auto auto auto auto auto;
+    grid-template-areas:
+        "pic head head"
+        "pic row1 text1"
+        "pic row2 text2"
+        "pic row3 text3"
+        "pic row4 text4"
+        "pic row5 text5"
+        "pic row6 row6"
+        "foot foot foot";
+}
+
+nav {
+    background-color: var(--color1);
+    height: 90px;
+    width: 100%;
+    display: none;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hamburger {
+    width: 50px;
+    height: 50px;
+    padding: 0px;
+    margin-top: 40px;
+    margin-right: 5%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+}
+
+.hamburgerSlice {
+    width: 50px;
+    height: 10px;
+    border-bottom: 3px solid var(--color2);
+}
+
+.socialMediaLogo, .empty {
+   width: 15%;
+   max-width: 70px;
+   max-height: 70px;
+   margin: 5px;
+}
+
+.isHiddenTop {
+  position: absolute;
+  top: -100%;
+  transition: all .5s ease-in-out;
+}
+
+.isTop {
+  position: absolute;
+  top: 0;
+  transition: all .5s ease-in-out;
+}
+
+@media only screen and (max-width: 901px) {
+    .headBlock{
+        font-size: 10px;
+    }
+}
